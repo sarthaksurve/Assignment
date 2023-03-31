@@ -1,0 +1,9 @@
+<form name="LoginForm" #LoginForm='ngForm'   (ngSubmit)='save()' novalidate=''>
+
+    Name : <input type="text" name="Name" [(ngModel)]="empArr.Name" #Name="ngModel" required> <br> <br>
+    Password: <input type="pass" name="pass" [(ngModel)]="empArr.pass" #pass="ngModel" required> <br> <br>
+    
+    <input type="submit" value="Register" (onclick)="save()" [disabled]="LoginForm.invalid">
+</form>
+
+<br> <br>
